@@ -114,13 +114,30 @@ void draw_line(int x1, int y1, int x2, int y2)
             put_dot(i, x1);
     }
 }
+void draw_triangle(int x, int y, int height)
+{
+    int i;
+
+    
+    for(i = 0; i < height; i++)
+        put_dot(y + i, x - i);
+
+    
+    for(i = 0; i < height; i++)
+        put_dot(y + i, x + i);
+
+    
+    for(i = x - height + 1; i <= x + height - 1; i++)
+        put_dot(y + height - 1, i);
+}
 
 
 int main(void)
 {
     clear_canvas();
-    draw_rectangle(55, 8, 6, 10);
+    draw_rectangle(10,5,20,8);
     draw_line(5,15,25,15);
+    draw_triangle(55,8,6);
     show_canvas();
     return 0;
 }
