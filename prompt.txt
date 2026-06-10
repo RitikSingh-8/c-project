@@ -1,1 +1,109 @@
+Project Title
+Menu-Driven 2D Graphics Editor Using C
 
+Project Description
+Design and implement a console-based 2D Graphics Editor in the C programming language that allows users to create, display, manage, and delete basic geometric shapes on a virtual drawing canvas. The editor should simulate a simple graphics environment using ASCII characters, where * represents a drawn pixel and _ represents an empty space.
+
+The application must be menu-driven and provide an interactive interface through which users can perform various drawing operations. All graphical objects should be stored in memory using structures and displayed on a two-dimensional character array that acts as the drawing canvas.
+
+Objectives-
+The primary objective of this project is to demonstrate the practical use of:
+-Structures in C
+-Arrays and 2D arrays
+-Functions and modular programming
+-Menu-driven applications
+-Basic computer graphics concepts
+-Data management using unique object identifiers
+
+Functional Requirements-
+1. Drawing Canvas
+-Create a drawing area of size 25 rows × 70 columns.
+-Initialize the canvas with the underscore character (_) to represent empty space.
+-Display the canvas with visible borders for better visualization.
+
+2. Shape Creation
+The editor must allow users to add the following shapes:
+Rectangle-
+-User enters:
+   X coordinate
+   Y coordinate
+   Width
+   Height
+-The rectangle should be drawn using * characters.
+Line-
+-User enters:
+  Starting point (x1, y1)
+  Ending point (x2, y2)
+-Support horizontal and vertical lines.
+Circle-
+-User enters:
+  Center coordinates (x, y)
+  Radius
+  Draw the circle boundary using an approximate distance formula.
+Triangle-
+-User enters:
+  Apex coordinates (x, y)
+  Height
+-Draw an isosceles triangle using * characters.
+
+3. Shape Storage
+-Store every shape in an array of structures.
+-Each structure should contain:
+-Unique Shape ID
+-Shape Type
+-Active/Deleted Status
+-Coordinates
+-Dimensions/Parameters
+
+4. Shape Identification
+-Every newly created shape must receive a unique ID automatically.
+-IDs should increase sequentially.
+
+5. Shape Deletion
+-Users can delete a shape by entering its ID.
+-The shape should not be physically removed from memory.
+-Instead, mark it as inactive/deleted.
+-Redraw the canvas after deletion.
+
+6. Shape Listing-
+-Display information about all stored shapes, including:
+-Shape ID
+-Shape Type
+-Current Status (Active or Deleted)
+
+7. Canvas Redrawing
+Whenever:
+-A new shape is added, or
+-An existing shape is deleted,
+the canvas should be cleared and all active shapes should be redrawn automatically.
+
+8. Menu System
+Provide the following menu options:
+  -Add Rectangle
+ - Add Line
+  -Add Circle
+  -Add Triangle
+  -Delete Shape
+  -View Shape List
+  -Display Canvas
+  -Exit Program
+
+Data Structure Design
+Use a structure named Shape containing:
+-Shape ID
+-Shape Type
+-Active Status
+-Position Coordinates
+-Shape Parameters
+
+Example:
+-Rectangle → Width and Height
+-Line → End Coordinates
+-Circle → Radius
+-Triangle → Height
+
+Constraints
+-Maximum number of shapes: 64
+-Canvas size: 25 × 70
+-Shapes must only be drawn within canvas boundaries.
+-Invalid menu choices should be handled gracefully.
