@@ -1,0 +1,22 @@
+# Ignore VS Code project settings
+.vscode/
+
+# Ignore compiled files
+*.exe
+*.obj
+*.o
+*.out
+
+# Ignore libraries and archives
+*.lib
+*.a
+*.dll
+*.so
+
+# Ignore debug files
+*.pdb
+*.idb
+
+# Ignore temporary files
+*.log
+*.tmp
