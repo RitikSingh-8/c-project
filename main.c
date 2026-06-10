@@ -82,4 +82,5 @@ int main(void)
     clear_canvas();
     show_canvas();
     return 0;
+    
 }
